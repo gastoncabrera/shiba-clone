@@ -1,0 +1,14 @@
+#app {
+  font-family: $font_1;
+}
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  color: #fff;
+  background: #f06500;
+}
+
+body {
+}

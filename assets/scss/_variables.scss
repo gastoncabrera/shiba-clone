@@ -1,0 +1,98 @@
+// colors
+$color_primary: #00ef8b;
+$color_secondary: #fff;
+$color_success: #fff;
+$color_warning: #fff;
+$color_error: #fff;
+$color_info: #fff;
+$color_dark: #082a36;
+$color_light: #ffffff;
+$color_grey: #fff;
+
+$theme_colors: (
+  primary: $color_primary,
+  secondary: $color_secondary,
+  success: $color_success,
+  warning: $color_warning,
+  error: $color_error,
+  info: $color_info,
+  light: $color_light,
+  dark: $color_dark
+);
+
+// breakpoints
+$breakpoints: (
+  sm: 480px,
+  md: 761px,
+  lg: 768px,
+  xl: 992px,
+  xxl: 1340px,
+  xxxl: 1792px
+);
+
+// font_family
+// $font_1: cgMainText, sans-serif;
+$font_1: "Khula", serif;
+$font_2: Arial, serif;
+
+// fonts
+$fonts: (
+  1: $font_1,
+  2: $font_2
+);
+
+// mixins
+
+@mixin title {
+  font-family: $font_1;
+  font-size: 30px;
+  line-height: 42px;
+  color: white;
+  text-align: center;
+  margin-bottom: 24px;
+
+  @include breakpoint(sm) {
+    text-align: left;
+    font-size: 36px;
+    line-height: 52px;
+  }
+
+  @include breakpoint(lg) {
+    font-size: 48px;
+    line-height: 66px;
+  }
+}
+
+@mixin description {
+  font-family: $font_1;
+  font-size: 16px;
+  line-height: 28px;
+  color: #bbbbbe;
+  text-align: center;
+
+  @include breakpoint(sm) {
+    font-size: 18px;
+    text-align: left;
+  }
+}
+
+// aspect-ratios
+$aspect_ratios: ((21, 9), (16, 9), (9, 16), (4, 3), (1, 1), (9, 14), (4, 2));
+
+$container_name: custom_container;
+
+// name|has responsive?|is active?
+$utilities: (
+  (background_color, false, true),
+  (color, false, true),
+  (list, false, true),
+  (object_fit, false, true),
+  (object_position, false, true),
+  (display, true, true),
+  (aspect_ratio, false, true),
+  (font_family, false, true)
+);
+
+$container_default: xxl;
+
+@import "./../../node_modules/crumb-scss/src/variables";
